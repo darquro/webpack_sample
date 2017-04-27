@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/assets/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 2);
@@ -91,9 +91,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-/**
-* Friend
-*/
 var Friend = function (_Person) {
   _inherits(Friend, _Person);
 
@@ -184,12 +181,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var Person = function () {
   function Person() {
     _classCallCheck(this, Person);
+
+    this.name = 'Person';
   }
 
   _createClass(Person, [{
     key: 'getName',
     value: function getName() {
-      return 'This is Person';
+      return 'This is ' + this.name;
     }
   }]);
 
@@ -2332,7 +2331,7 @@ var stylesInDom = {},
 	isOldIE = memoize(function() {
 		// Test for IE <= 9 as proposed by Browserhacks
 		// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-		// Tests for existence of standard globals is to allow style-loader
+		// Tests for existence of standard globals is to allow style-loader 
 		// to operate correctly into non-standard environments
 		// @see https://github.com/webpack-contrib/style-loader/issues/177
 		return window && document && document.all && !window.atob;
