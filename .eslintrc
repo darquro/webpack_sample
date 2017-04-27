@@ -1,0 +1,22 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "rules": {
+    "import/no-unresolved": [2, { ignore: ["^js|^css"] }],
+    "import/no-extraneous-dependencies": [0],
+    "import/extensions": [0],
+  },
+  "globals": {
+    /* MOCHA */
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false
+  }
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="assets/webpack_sample.js"></script>
+</head>
+<body>
+  <button class="btn" id="btn">click me</button>
+  <script>
+  var friend = new Friend('Taro');
+  document.getElementById('btn').onclick = function(){
+    friend.callName();
+  };
+  </script>
+</body>
+</html>
